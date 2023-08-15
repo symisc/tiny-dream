@@ -13,7 +13,7 @@
 * [Project Roadmap](https://pixlab.io/tiny-dream#roadmap)
 * [License](https://pixlab.io/tiny-dream#license)
 * [C++ API Reference Guide](https://pixlab.io/tiny-dream#cpp-api)
-* [Issue Tracker](https://github.com/symisc/tiny-dream/issues)
+* [Issues Tracker](https://github.com/symisc/tiny-dream/issues)
 * [Related Projects](#td-projects)
 
 <h2 id="tiny-dream">Introducing PixLab's Tiny Dream</h2>
@@ -22,7 +22,7 @@
 <em>For the extensive list of features, please refer to the officical documentation <a href="https://pixlab.io/tiny-dream#features" target="_blank"><strong>here</strong></a>.</em>
 <br><br>
 <ul>
-  <li><strong>OpenCV Dependecny Free</strong>: Only <font face="courier"><a href="https://github.com/nothings/stb/blob/master/stb_image_write.h" target="_blank">stb_image_write.h</a></font> from the excellent <a href="https://github.com/nothings/stb/" target="_blank">stb <em class="ti ti-new-window"></em></a> single-header, public domain C library is required for saving images to disk.</li>
+  <li><strong>OpenCV Dependency Free</strong>: Only <font face="courier"><a href="https://github.com/nothings/stb/blob/master/stb_image_write.h" target="_blank">stb_image_write.h</a></font> from the excellent <a href="https://github.com/nothings/stb/" target="_blank">stb <em class="ti ti-new-window"></em></a> single-header, public domain C library is required for saving images to disk.</li>
   <li><strong>Lowest Run-Time <a href="https://pixlab.io/tiny-dream#features" target="_blank">Memory Footprint</a> Recorded for a Stable Diffusion Implementation</strong>.</li>
   <li><strong>Straightforward to <a href="https://pixlab.io/tiny-dream#getting-started" target="_blank">Integrate on Existing Codebases</strong>: Just drop <font face="courier"><em>tinydream.hpp</em></font> and <font face="courier"><em>stb_image_write.h</em></font> on your source tree with the <a href="https://pixlab.io/tiny-dream#downloads"><strong>Pre-trained Models & Assets</strong></a>.</li>
     <li><strong>Reasonably fast on Intel/AMD CPUs (<a href="https://pixlab.io/tiny-dream#bench">Benchmarks</a>)</strong>: With TBB threading and SSE/AVX vectorization.</li>
