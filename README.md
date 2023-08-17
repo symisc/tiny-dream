@@ -23,7 +23,7 @@
 <br><br>
 <ul>
   <li><strong>OpenCV Dependency Free</strong>: Only <font face="courier"><a href="https://github.com/nothings/stb/blob/master/stb_image_write.h" target="_blank">stb_image_write.h</a></font> from the excellent <a href="https://github.com/nothings/stb/" target="_blank">stb <em class="ti ti-new-window"></em></a> single-header, public domain C library is required for saving images to disk.</li>
-  <li><strong>Lowest Run-Time <a href="https://pixlab.io/tiny-dream#features" target="_blank">Memory Footprint</a> Recorded for a Stable Diffusion Implementation</strong>.</li>
+  <li><strong>Smallest, Run-Time <a href="https://pixlab.io/tiny-dream#features" target="_blank">Memory Footprint</a> for Running Stable Diffusion in Inference</strong>.</li>
   <li><strong>Straightforward to <a href="https://pixlab.io/tiny-dream#getting-started" target="_blank">Integrate on Existing Codebases</strong>: Just drop <font face="courier"><em>tinydream.hpp</em></font> and <font face="courier"><em>stb_image_write.h</em></font> on your source tree with the <a href="https://pixlab.io/tiny-dream#downloads"><strong>Pre-trained Models & Assets</strong></a>.</li>
     <li><strong>Reasonably fast on Intel/AMD CPUs (<a href="https://pixlab.io/tiny-dream#bench">Benchmarks</a>)</strong>: With TBB threading and SSE/AVX vectorization.</li>
     <li><strong>Support <a href="https://github.com/xinntao/Real-ESRGAN" target="_blank">Real-ESRGAN</a>, A Super Resolution Network Upscaler</strong>.</li>
@@ -32,10 +32,17 @@
     <li><strong>Support for Stable Diffusion Extra Parameters</strong>: Adjust <a href="https://pixlab.io/tiny-dream#tiny-dream-method">Seed resizing</a> & <a href="https://pixlab.io/tiny-dream#tiny-dream-method">Guidance Scale</a>.</li>
 </ul>
 <h2 id="td-start">Getting Started with Tiny-Dream</h2>
-<p>Integrating <span style="font-family:Montserrat"><strong>Tiny Dream</strong></span> on your existing code base is straightforward. Here is what to do without having to do a lot of tedious reading and configuration:</p>
-<ol>
-  <li></li>
-</ol>
+<p><strong>Integrating Tiny Dream on your existing code base is straightforward</strong>. Here is what to do without having to do a lot of tedious reading and configuration:</p>
+<h4>Download Tiny-Dream</h4>
+<ul>
+  <li><a href="https://github.com/symisc/tiny-dream/releases">Download</a> the latest public release of Tiny Dream, and extract the package on a directory of your choice.</li>
+  <li>Refer to the <a href="https://pixlab.io/tiny-dream#downloads">downloads section</a> to get a copy of the Tiny Dream source code as well as the <strong>Pre-Trained Models & Assets</strong>.</li>
+</ul>
+<h4>Embedding Tiny-Dream</h4>
+    <ul>
+      <li>The Tiny Dream source code <a href="https://pixlab.io/tiny-dream#downloads">comprise</a> <strong>only two header files</strong> that is <font face="courier"><strong>tinydream.hpp</strong></font> and <font face="courier"><strong>stb_image_write.h</strong></font>.</li>
+      <li>All you have to do is drop these two C/C++ header files on your source tree, and <a href="https://pixlab.io/tiny-dream#tiny-dream-constructor">instantiate</a> a new <font face="courier">tinyDream</font> object as shown on the pseudo C++ code below:</li>
+    </ul>
 <h2>Official Docs & Resources</h2>
 <table class="table">
     <tbody>
