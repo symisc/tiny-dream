@@ -43,6 +43,112 @@
       <li>The Tiny Dream source code <a href="https://pixlab.io/tiny-dream#downloads">comprise</a> <strong>only two header files</strong> that is <font face="courier"><strong>tinydream.hpp</strong></font> and <font face="courier"><strong>stb_image_write.h</strong></font>.</li>
       <li>All you have to do is drop these two C/C++ header files on your source tree, and <a href="https://pixlab.io/tiny-dream#tiny-dream-constructor">instantiate</a> a new <font face="courier">tinyDream</font> object as shown on the pseudo C++ code below:</li>
     </ul>
+    
+```
+#include "tinydream.hpp"
+/*
+* Main Entry Point. The only required argument is the Positive Prompt.
+* Passing a Negative Prompt (words separated by commas) is highly recommended though.
+* 
+* We recommend that you experiment with different seed & step values
+* in order to achieve a desirable result.
+* 
+* ./tinydream "positive prompt" ["negative prompt"] [seed] [step]
+*/
+int main(int argc, char *argv[]) 
+{
+	tinyDream td; // stack allocated tinyDream object
+
+	// Display the library current inference engine, version number, and copyright notice
+	std::cout << tinyDream::about() << std::endl;
+	
+	// At least a positive prompt must be supplied via command line
+	if (argc < 2) {
+		std::cout << "Missing Positive (and potentially Negative) Prompt: Describe something you'd like to see generated..." << std::endl;
+		std::cout << "Example of Prompts:" << std::endl;
+		// Example of built-in Positive/Negative Prompts
+		auto prompts = tinyDream::promptExample();
+		std::cout << "\tPositive Prompt: " << prompts.first << std::endl;
+		std::cout << "\tNegative Prompt: " << prompts.second << std::endl;
+		return -1;
+	}
+
+	// Register a log handler callback responsible of 
+	// consuming log messages generated during inference.
+	td.setLogCallback(logCallback, nullptr);
+	
+	// Optionally, set the assets path if the pre-trained models
+	// are not extracted on the same directory as your executable
+	// The Tiny-Dream assets can be downloaded from: https://pixlab.io/tiny-dream#downloads
+	td.setAssetsPath("/path/to/tinydream/assets"); // Remove or comment this if your assets are located on the same directory as your executable
+	
+	// Optionally, set a prefix of your choice to each freshly generated image name
+	td.setImageOutputPrefix("tinydream-");
+	
+	// Optionally, set the directory where you want
+	// the generated images to be stored
+	td.setImageOutputPath("/home/photos/");
+	
+	int seedMax = 90;
+	if (argc > 3) {
+		/*
+		* Seed in Stable Diffusion is a number used to initialize the generation. 
+		* Controlling the seed can help you generate reproducible images, experiment
+		* with other parameters, or prompt variations.
+		*/
+		seedMax = std::atoi(argv[3]);
+	}
+	int step = 30;
+	if (argc > 4) {
+		/*
+		* adjusting the inference steps in Stable Diffusion: The more steps you use,
+		* the better quality you'll achieve but you shouldn't set steps as high
+		* as possible. Around 30 sampling steps (default value) are usually enough
+		* to achieve high-quality images.
+		*/
+		step = std::atoi(argv[4]);
+	}
+
+	/*
+	* User Supplied Prompts - Generate an image that matches the input criteria.
+	* 
+	* Positive Prompt (required): Describe something you'd like to see generated (comma separated words).
+	* Negative Prompt (optional): Describe something you don't like to see generated (comma separated words).
+	*/
+	std::string positivePrompt{ argv[1] };
+	std::string negativePrompt{ "" };
+	if (argc > 2) {
+		negativePrompt = std::string{ argv[2] };
+	}
+
+	/*
+	* Finally, run Stable Diffusion in inference
+	* 
+	* The supplied log consumer callback registered previously should shortly receive
+	* all generated log messages (including errors if any) during inference.
+	* 
+	* Refer to the official documentation at: https://pixlab.io/tiny-dream#tiny-dream-method
+	* for the expected parameters the tinyDream::dream() method takes.
+	*/
+	for (int seed = 1; seed < seedMax; seed++) {
+		std::string outputImagePath;
+
+		td.dream(
+			positivePrompt, 
+			negativePrompt, 
+			outputImagePath, 
+			true, /* Set to false if you want 512x512 pixels output instead of 2048x2048 output */
+			seed,
+			step
+		);
+
+		// You do not need to display the generated image path manually each time via std::cout
+		// as the supplied log callback should have already done that.
+		std::cout << "Output Image location: " << outputImagePath << std::endl; // uncomment this if too intrusive
+	}
+	return 0;
+}
+```
 <h2>Official Docs & Resources</h2>
 <table class="table">
     <tbody>
