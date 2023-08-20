@@ -158,7 +158,7 @@ int main(int argc, char *argv[])
 <p>As we continue to develop and improve Tiny Dream, we have an exciting roadmap of future addons and enhancements planned. Refer to the Roadmap page at <a href="https://pixlab.io/tiny-dream#roadmap">pixlab.io/tiny-dream</a> or the <a href="https://blog.pixlab.io">PixLab Blog</a> for the exhaustive list of todos & ongoing progress...</p>
 <ul>
 	<li><strong>Move the Tensor library to a non bloated one such as <a href="https://sod.pixlab.io/">SOD</a> or <a href="https://github.com/ggerganov/ggml">GGML</a> with focus on CPU performance</strong>.</li>
-	<li><strong>Provide a Cross-Platform GUI to Tiny Dream implemented in <a> href="">Dear imGUI</a></strong>.</li>
+	<li><strong>Provide a Cross-Platform GUI to Tiny Dream implemented in <a href="https://github.com/ocornut/imgui">Dear imGUI</a></strong>.</li>
 	<li>Provide a Web-Assembly port to the library once the future Tensor library (SOD or GGML) ported to WASM.</li>
 	<li>Output SVG, and easy to alter formats (potentially PSD) rather than static PNGs.</li>
 	<li> Provide an Android, proof of concept, show-case APK.</li>
