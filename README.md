@@ -1,6 +1,11 @@
-<h1 align="center">TINY DREAM<br><br>An embedded, Header Only, Stable Diffusion implementation in C++<br><a href="https://pixlab.io/tiny-dream">pixlab.io/tiny-dream</a></h1>
+<h1 align="center">TINY DREAM<br><br>An embedded, Header Only, Stable Diffusion Inference C++ Library<br><a href="https://pixlab.io/tiny-dream">pixlab.io/tiny-dream</a></h1>
 
 ![td_screen_website](https://github.com/symisc/tiny-dream/assets/4615920/b4e9f6b3-4019-4d48-9e3e-879a071213a5)
+
+<h5><em>Latest News</em> 🔥</h5>
+<ul>
+	<li></li>
+</ul>
 
 [![API documentation](https://img.shields.io/badge/API%20documentation-Ready-green.svg)](https://pixlab.io/tiny-dream)
 [![dependency](https://img.shields.io/badge/dependency-none-ff96b4.svg)](https://pixlab.io/tiny-dream#downloads)
@@ -10,15 +15,15 @@
 * [Features](#td-features)
 * [Getting Started](#td-start)
 * [Downloads](https://pixlab.io/tiny-dream#downloads)
-* [Project Roadmap](https://pixlab.io/tiny-dream#roadmap)
+* [Project Roadmap](#roadmap)
 * [License](https://pixlab.io/tiny-dream#license)
 * [C++ API Reference Guide](https://pixlab.io/tiny-dream#cpp-api)
 * [Issues Tracker](https://github.com/symisc/tiny-dream/issues)
 * [Related Projects](#td-projects)
 
 <h2 id="tiny-dream">Introducing PixLab's Tiny Dream</h2>
-<p><a href="https://pixlab.io/tiny-dream" target="_blank">Tiny Dream</a> is a header only, dependency free, <strong>partially uncensored, Stable Diffusion implementation written in C++</strong> with primary focus on CPU efficiency, and smaller memory footprint. <strong>Tiny Dream</strong> runs reasonably <a href="https://pixlab.io/tiny-dream#features">fast</a> on the average consumer hardware, <a href="https://pixlab.io/tiny-dream#features">require</a> <strong>only 5.5 GB of RAM</strong> to execute, does not enforce Nvidia GPUs presence, and is designed to be <a href="https://pixlab.io/tiny-dream#getting-started">embedded</a> on larger codebases (host programs) with an easy to use <a href="https://pixlab.io/tiny-dream#cpp-api">C++ API</a>. The possibilities are literally endless, or at least extend to the boundaries of Stable Diffusion's latent manifold.</p>
-<h2 id="td-features">Features</h2>
+<p><a href="https://pixlab.io/tiny-dream" target="_blank">Tiny Dream</a> is a header only, dependency free, <strong>partially uncensored, Stable Diffusion implementation written in C++</strong> with primary focus on CPU efficiency, and smaller memory footprint. <strong>Tiny Dream</strong> runs reasonably <a href="https://pixlab.io/tiny-dream#features">fast</a> on the average consumer hardware, <a href="https://pixlab.io/tiny-dream#features">require</a> <strong>only 1.7 ~ 5.5 GB of RAM</strong> to execute, does not enforce Nvidia GPUs presence, and <strong>is designed to be <a href="https://pixlab.io/tiny-dream#getting-started">embedded</a> on larger codebases (host programs) with an easy to use <a href="https://pixlab.io/tiny-dream#cpp-api">C++ API</a></strong>. The possibilities are literally endless, or at least extend to the boundaries of Stable Diffusion's latent manifold.</p>
+<h2 id="td-features">Features 🔥</h2>
 <em>For the extensive list of features, please refer to the officical documentation <a href="https://pixlab.io/tiny-dream#features" target="_blank"><strong>here</strong></a>.</em>
 <br><br>
 <ul>
@@ -31,7 +36,7 @@
     <li><strong>Support for Output Metadata</strong>: Link meta information to your output images such as <em>copyright notice</em>, <em>comments</em>, or any other meta data you would like to see linked to your image.</li>
     <li><strong>Support for Stable Diffusion Extra Parameters</strong>: Adjust <a href="https://pixlab.io/tiny-dream#tiny-dream-method">Seed resizing</a> & <a href="https://pixlab.io/tiny-dream#tiny-dream-method">Guidance Scale</a>.</li>
 </ul>
-<h2 id="td-start">Getting Started with Tiny-Dream</h2>
+<h2 id="td-start">Getting Started with Tiny-Dream 🔥</h2>
 <p><strong>Integrating Tiny Dream on your existing code base is straightforward</strong>. Here is what to do without having to do a lot of tedious reading and configuration:</p>
 <h4>Download Tiny-Dream</h4>
 <ul>
@@ -149,6 +154,15 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+<h2 id="roadmap">TODOs & Roadmap 🔥</h2>
+<p>As we continue to develop and improve Tiny Dream, we have an exciting roadmap of future addons and enhancements planned. Refer to the Roadmap page at <a href="https://pixlab.io/tiny-dream#roadmap">pixlab.io/tiny-dream</a> or the <a href="https://blog.pixlab.io">PixLab Blog</a> for the exhaustive list of todos & ongoing progress...</p>
+<ul>
+	<li><strong>Move the Tensor library to a non bloated one such as <a href="https://sod.pixlab.io/">SOD</a> or <a href="https://github.com/ggerganov/ggml">GGML</a> with focus on CPU performance</strong>.</li>
+	<li><strong>Provide a Cross-Platform GUI to Tiny Dream implemented in <a> href="">Dear imGUI</a></strong>.</li>
+	<li>Provide a Web-Assembly port to the library once the future Tensor library (SOD or GGML) ported to WASM.</li>
+	<li>Output SVG, and easy to alter formats (potentially PSD) rather than static PNGs.</li>
+	<li> Provide an Android, proof of concept, show-case APK.</li>
+</ul>
 <h2>Official Docs & Resources</h2>
 <table class="table">
     <tbody>
@@ -162,4 +176,12 @@ int main(int argc, char *argv[])
       </tr>
     </tbody>
   </table>
-  <h2 id="td-projects">Related Projects</h2>
+  <h2 id="td-projects">Related Projects 🔥</h2>
+  <p>You may find useful the following production-ready projects developed & maintained by <a href="https://pixlab.io">PixLab</a> | <a href="https://symisc.net">Symisc Systems</a>:</p>
+  <ul>
+	  <li><a href="https://sod.pixlab.io">SOD</a> - An Embedded, Dependency-Free, Computer Vision C/C++ Library.</li>
+	  <li><a href="https://faceio.net">FACEIO</a> - Cross Browser, Passwordless Facial Authentication Framework.</li>
+	  <li><a href="https://annotate.pixlab.io/">PixLab Annotate</a> - Online Image Annotation, Labeling & Segmentation Tool.</li>
+	  <li><a href="https://pixlab.io/art">ASCII Art</a> - Real-Time ASCII Art Rendering C Library.</li>
+	  <li><a href="https://unqlite.org">UnQLite</a> - An Embedded, Transactional Key/Value Database Engine.</li>
+  </ul>
