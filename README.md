@@ -154,6 +154,28 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+<h4>Building Tiny-Dream</h4>
+<ul>
+	<li>Building Tiny-Dream from source require a modern C++17 compiler such as GCC 7 or later, Clang or Microsoft Visual Studio (MSVC).</li>
+	<li>You also <strong>need to link to the default backend Tensor library</strong> in order to generate the executable.</li>
+	<li>As of this release, <a href="https://github.com/Tencent/ncnn/wiki/how-to-build" target="_blank">NCNN <em class="ti ti-new-window"></em></a> is the default tensor library. On our <a href="#roadmap">Roadmap</a>, we plan to ditch <font face="courier">ncnn</font> to a less bloated tensor library such as <a href="https://sod.pixlab.io" target="_blank">SOD</a> or <a href="https://github.com/ggerganov/ggml " target="_blank">GGML</a> with focus on CPU efficiency</strong>.</li>
+	<li>Alternatively, you can rely on a build manager such as CMAKE to build the executable for you. The Tiny-Dream repository repository already contain the necessarily CMAKE template to build the executable from source.</li>
+	<li>An example of generating a heavy optimized executable without relying on a external build manager is shown just below:</li>
+</ul>
+
+```
+git clone https://github.com/symisc/tiny-dream.git
+cd tiny-dream
+g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -funroll-all-loops -pipe -march=native -std=c++17 -Wall -Wextra `pkg-config --cflags --libs ncnn` -lstdc++ -pthread -Wl -flto -fopt-info-vec-optimized
+./tinydream "pyramid, desert, palm trees, river, (landscape), (high quality)"
+```
+<h4>Get the Pre-Trained Models & Assets</h4>
+<ul>
+	<li>Once your executable built, <strong>you will need the Tiny Dream <a href="https://pixlab.io/tiny-dream#downloads">Pre-Trained Models & Assets</a> path accessible to your executable</strong>.</li>
+	<li>The Tiny Dream assets comprise all pre-trained models (<strong>over 2GB as of this release</strong>) required by the <a href="https://pixlab.io/tiny-dream#tiny-dream-method"><font face="courier">tinyDream::dream()</font></a> method in order to run stable diffusion in inference.</li>
+	<li>You can download the pre-trained models from the <a href="https://pixlab.io/tiny-dream#downloads">Download</a> section on the <a href="https://pixlab.io/">PixLab</a> website.</li>
+	<li>Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and set the full path via <font face="courier"><a href="https://pixlab.io/tiny-dream#set-assets-path-method">tinyDream::setAssetsPath()</a></font> or from the Tiny Dream <a href="https://pixlab.io/tiny-dream#tiny-dream-constructor">constructor</a>.</li>
+</ul>
 <h2 id="roadmap">TODOs & Roadmap 🔥</h2>
 <p>As we continue to develop and improve Tiny Dream, we have an exciting roadmap of future addons and enhancements planned. Refer to the Roadmap page at <a href="https://pixlab.io/tiny-dream#roadmap">pixlab.io/tiny-dream</a> or the <a href="https://blog.pixlab.io">PixLab Blog</a> for the exhaustive list of todos & ongoing progress...</p>
 <ul>
