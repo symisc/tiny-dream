@@ -154,6 +154,8 @@ int main(int argc, char *argv[])
 	return 0;
 }
 ```
+<h4>Learn the Fundamentals (C++ API)</h4>
+<p></p>
 <h4>Building Tiny-Dream</h4>
 <ul>
 	<li>Building Tiny-Dream from source require a modern C++17 compiler such as GCC 7 or later, Clang or Microsoft Visual Studio (MSVC).</li>
@@ -176,6 +178,8 @@ g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -
 	<li>You can download the pre-trained models from the <a href="https://pixlab.io/tiny-dream#downloads">Download</a> section on the <a href="https://pixlab.io/">PixLab</a> website.</li>
 	<li>Once downloaded, extract the assets ZIP archive in a directory of your choice (usually the directory where your executable is located), and set the full path via <font face="courier"><a href="https://pixlab.io/tiny-dream#set-assets-path-method">tinyDream::setAssetsPath()</a></font> or from the Tiny Dream <a href="https://pixlab.io/tiny-dream#tiny-dream-constructor">constructor</a>.</li>
 </ul>
+<h4>Continue with The C++ API Reference Guide</h4>
+<p>The Tiny Dream <a href="https://pixlab.io/tiny-dream#cpp-api">C++ Interface</a>, provides detailed specifications for all of the various methods the Tiny Dream class exports. Once the reader understands the basic principles of operation for <strong>Tiny Dream</strong>, that <a href="https://pixlab.io/tiny-dream##cpp-api">document</a> should serve as a reference guide.</p>
 <h2 id="roadmap">TODOs & Roadmap 🔥</h2>
 <p>As we continue to develop and improve Tiny Dream, we have an exciting roadmap of future addons and enhancements planned. Refer to the Roadmap page at <a href="https://pixlab.io/tiny-dream#roadmap">pixlab.io/tiny-dream</a> or the <a href="https://blog.pixlab.io">PixLab Blog</a> for the exhaustive list of todos & ongoing progress...</p>
 <ul>
