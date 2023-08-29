@@ -155,7 +155,22 @@ int main(int argc, char *argv[])
 }
 ```
 <h4>Learn the Fundamentals (C++ API)</h4>
-<p></p>
+<ul>
+	<li>The above code should be self-explanatory, and easy to understand for the average C++ programmer. The <strong>full C++ integration code</strong> for a typical application embedding Tiny Dream is located at: <a href="https://pixlab.io/tiny-dream#code-gist">pixlab.io/tiny-dream#code-gist</a>.</li>
+	<li>As of this release, the library exposes a single class named <code>tinyDream</code> with the following exported methods:
+		<ul>
+			<li><a href="https://pixlab.io/tiny-dream#tiny-dream-constructor">tinyDream::tinyDream()</a> - <em>Constructor</em></li>
+                        <li><a href="https://pixlab.io/tiny-dream#tiny-dream-method"><strong>tinyDream::dream()</strong></a> - <em>Stable Diffusion Inference</em></li>
+                        <li><a href="https://pixlab.io/tiny-dream#set-img-output-method">tinyDream::setImageOutputPath()</a></li>
+                        <li><a href="https://pixlab.io/tiny-dream#set-img-output-prefix">tinyDream::setImageOutputPrefix()</a></li>
+			<li><a href="https://pixlab.io/tiny-dream#set-log-callback">tinyDream::setLogCallback()</a></li>
+                        <li><a href="https://pixlab.io/tiny-dream#set-assets-path-method">tinyDream::setAssetsPath()</a></li>
+                        <li><a href="https://pixlab.io/tiny-dream#prompt-example-method">tinyDream::promptExample()</a></li>
+                        <li><a href="https://pixlab.io/tiny-dream#about-method">tinyDream::about()</a></li>
+		</ul>
+	</li>
+	<li><strong>A step-by-step, detailed integration guide, and call logic of the above methods is located at: <a href="https://pixlab.io/tiny-dream#step-by-step-cpp">pixlab.io/tiny-dream#step-by-step-cpp</a></strong>.</li>
+</ul>
 <h4>Building Tiny-Dream</h4>
 <ul>
 	<li>Building Tiny-Dream from source require a modern C++17 compiler such as GCC 7 or later, Clang or Microsoft Visual Studio (MSVC).</li>
