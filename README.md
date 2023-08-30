@@ -4,7 +4,7 @@
 
 <h5><em>Latest News</em> 🔥</h5>
 <ul>
-	<li></li>
+	<li><strong>Tiny Dream 1.7.5 <a href="https://github.com/symisc/tiny-dream/releases/tag/1.7.5">Released</a> - <a href="https://pixlab.io/tiny-dream">Get Started</a></strong>.</li>
 </ul>
 
 [![API documentation](https://img.shields.io/badge/API%20documentation-Ready-green.svg)](https://pixlab.io/tiny-dream)
@@ -24,7 +24,7 @@
 <h2 id="tiny-dream">Introducing PixLab's Tiny Dream</h2>
 <p><a href="https://pixlab.io/tiny-dream" target="_blank">Tiny Dream</a> is a header only, dependency free, <strong>partially uncensored, Stable Diffusion implementation written in C++</strong> with primary focus on CPU efficiency, and smaller memory footprint. <strong>Tiny Dream</strong> runs reasonably <a href="https://pixlab.io/tiny-dream#features">fast</a> on the average consumer hardware, <a href="https://pixlab.io/tiny-dream#features">require</a> <strong>only 1.7 ~ 5.5 GB of RAM</strong> to execute, does not enforce Nvidia GPUs presence, and <strong>is designed to be <a href="https://pixlab.io/tiny-dream#getting-started">embedded</a> on larger codebases (host programs) with an easy to use <a href="https://pixlab.io/tiny-dream#cpp-api">C++ API</a></strong>. The possibilities are literally endless, or at least extend to the boundaries of Stable Diffusion's latent manifold.</p>
 <h2 id="td-features">Features 🔥</h2>
-<em>For the extensive list of features, please refer to the officical documentation <a href="https://pixlab.io/tiny-dream#features" target="_blank"><strong>here</strong></a>.</em>
+<em>For the extensive list of features, please refer to the official documentation <a href="https://pixlab.io/tiny-dream#features" target="_blank"><strong>here</strong></a>.</em>
 <br><br>
 <ul>
   <li><strong>OpenCV Dependency Free</strong>: Only <font face="courier"><a href="https://github.com/nothings/stb/blob/master/stb_image_write.h" target="_blank">stb_image_write.h</a></font> from the excellent <a href="https://github.com/nothings/stb/" target="_blank">stb <em class="ti ti-new-window"></em></a> single-header, public domain C library is required for saving images to disk.</li>
