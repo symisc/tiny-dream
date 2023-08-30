@@ -1,4 +1,38 @@
-                    GNU AFFERO GENERAL PUBLIC LICENSE
+/*
+* Tiny Dream - Header-Only, Embedded Stable Diffusion Inference Library.
+* 
+* Copyright (C) 2023 PixLab| Symisc Systems. https://pixlab.io/tiny-dream
+* Version 1.7.5
+*
+* Symisc Systems employs a dual licensing model that offers customers
+* a choice of either our open source license (GNU Affero AGPLv3) 
+* or a commercial license.
+*
+* For information on licensing, redistribution of the Tiny Dream, 
+* and for a DISCLAIMER OF ALL WARRANTIES please visit:
+*     https://pixlab.io/tiny-dream#license
+* or contact:
+*     licensing@symisc.net
+*     support@pixlab.io
+*/
+/*
+ * This file is part of Tiny Dream - Open Source Release (GNU Affero AGPLv3)
+ *
+ * Tiny Dream is free software : you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Tiny Dream is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with Tiny Dream. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+                  GNU AFFERO GENERAL PUBLIC LICENSE
                        Version 3, 19 November 2007
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
