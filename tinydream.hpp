@@ -81,7 +81,11 @@ private:
     std::string imgPrefix{ "tinydream_" };
     std::function<void(const char* /* zLogMsg */, int /* msg length */ , void* /* pCookie */)> xLog{nullptr};
     void* xLogUserData{ nullptr };
-    inline constexpr void _log(const std::string& msg) const {
+#if (defined(_MSC_VER) && _MSC_VER <= 1929) // not sure exactly what version supports this - 1929 doesn't
+    inline void _log(const std::string& msg) const {
+#else 
+    inline constexpr void _log(const std::string & msg) const {
+#endif
         if (xLog) {
             xLog(msg.c_str(), static_cast<int>(msg.size()), xLogUserData);
         }
@@ -425,7 +429,7 @@ std::vector<std::pair<std::string, float>> tinyDream::parsePromptAttention(std::
 
             round_brackets.pop();
         }
-        else if (text == "]" and square_brackets.size() > 0)
+        else if (text == "]" && square_brackets.size() > 0)
         {
             for (unsigned long p = square_brackets.top(); p < res.size(); p++)
             {
@@ -615,7 +619,7 @@ bool tinyDream::loadTokens()
         _log("[-Info-]: Token Embedding  - Tokens Table Already Loaded. Skipping\n");
     return true;
 }
-bool tinyDream::dream(const std::string& positivePrompt, const std::string& negativePrompt, std::string& outputImgPath, bool upScale = true, int seed = 42, int step = 30)
+bool tinyDream::dream(const std::string& positivePrompt, const std::string& negativePrompt, std::string& outputImgPath, bool upScale, int seed, int step)
 {
     if (positivePrompt.empty()) {
         _log(std::string{ "[-ERROR-]: Missing Positive Prompt (Keywords): Describe something you'd like to see generated using words separated by commas. High priority or meta instructions must be surrounded by parenthesis.\n" });
