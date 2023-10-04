@@ -183,7 +183,7 @@ int main(int argc, char *argv[])
 ```
 git clone https://github.com/symisc/tiny-dream.git
 cd tiny-dream
-g++ -o tinydream boileplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -funroll-all-loops -pipe -march=native -std=c++17 -Wall -Wextra `pkg-config --cflags --libs ncnn` -lstdc++ -pthread -Wl -flto -fopt-info-vec-optimized
+g++ -o tinydream boilerplate.cpp -funsafe-math-optimizations -Ofast -flto=auto  -funroll-all-loops -pipe -march=native -std=c++17 -Wall -Wextra `pkg-config --cflags --libs ncnn` -lstdc++ -pthread -Wl -flto -fopt-info-vec-optimized
 ./tinydream "pyramid, desert, palm trees, river, (landscape), (high quality)"
 ```
 <h4>Get the Pre-Trained Models & Assets</h4>
